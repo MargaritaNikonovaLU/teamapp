@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\AuthFormRequest;
 use App\Http\Requests\UsersFormRequest;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
@@ -55,15 +56,19 @@ class AuthController extends Controller
                 //ja lietotājs nav aktivēts, tad viņs tiek paziņots, ka ir jāpagaidā apstiprinājums
                 return redirect()->back()->with('message', 'JĀGAIDA REĢISTRĀCIJAS APSTIPRINĀJUMU');
                 //ja ir aktīvs, tad lietotāju pārvieto uz viņa 'profila' skatu
-            } else return view('profile');
+            } else return redirect()->route('userprofile');
         }
 
     }
 
 
-    //kad lietotājs iziet no sistēmas
+    //kad lietotājs iziet no sistēmas, tiek saglabāta pēdējās vizītes laiks un datums ar iebūvētas Carbon funkcijas palīdzības
     public function getLogout() {
+
+        $user = User::find(Auth::id());
+        $user->rememberTime = Carbon::now();  //uzstāda laiku, lai pēc tam varētu zināt, kad lietotājs bija online pēdējo reizi
+        $user->save();
         Auth::logout();
-        return redirect()->route('auth.signin'); //atgriež viņu ielogošanas skatā
+        return redirect()->route('auth.signin'); //atgriež ielogošanas skatā
 
 }}

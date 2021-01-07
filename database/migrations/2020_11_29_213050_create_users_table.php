@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('password');
             $table->string('vcode');
-            $table->string('remember_token', 100)->nullable();
+            $table->datetime('rememberTime')->nullable();
             $table->timestamps();
             $table->boolean('is_admin')->default(1);
             $table->boolean('approvestatus')->default(0);

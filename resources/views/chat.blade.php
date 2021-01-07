@@ -189,7 +189,7 @@
 
                 $.ajax({
                     type:"post",
-                    url: 'message', //pāreja uz route
+                    url: 'message',
                     data: datastr,
                     cache:false,
                     success: function (data) {

@@ -83,12 +83,14 @@
                         </div>
                     </div>
 
+                @if(auth()->user()->id !== $row['id'])
                 <div class="col-xl-4 col-md-4">
                     <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Pēdējo reizi sistēmā</h6>
                     <div class="col-sm-6">
-{{--                        <h6 class="text-muted f-w-400">{{$row['remember_token']}}</h6>--}}
+                        <h6 class="text-muted f-w-400">{{$row['rememberTime']}}</h6>
                     </div>
                 </div>
+                    @endif
                 </div>
             </div>
         </div>

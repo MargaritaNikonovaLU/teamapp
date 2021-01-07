@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="23a750bd-3f14-4ebf-a5e5-81047a558f6d" name="Default Changelist" comment="" />
+    <list default="true" id="23a750bd-3f14-4ebf-a5e5-81047a558f6d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_29_213050_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_29_213050_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/chat.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/chat.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/darbiniekiProfiles.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/darbiniekiProfiles.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/asade.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/footer.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/inc/topbarheader.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/useProfile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/useProfile.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +21,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
@@ -189,8 +203,16 @@
       <workItem from="1609013538436" duration="64638000" />
       <workItem from="1609284978348" duration="33000" />
       <workItem from="1609285036855" duration="58000" />
-      <workItem from="1609285130787" duration="70518000" />
+      <workItem from="1609285130787" duration="78066000" />
     </task>
+    <task id="LOCAL-00001" summary="Project">
+      <created>1610053841501</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610053841501</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +222,8 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+    <MESSAGE value="Project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Project" />
   </component>
   <component name="WindowStateProjectService">
     <state x="438" y="186" key="#Notifications" timestamp="1610049609054">
@@ -218,14 +242,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="117" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1609721828808" />
-    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1610053403713">
+    <state x="251" y="0" key="CommitChangelistDialog2" timestamp="1610053837652">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1610053403713" />
-    <state x="507" y="281" key="Github.CreateGistDialog" timestamp="1610052054482">
+    <state x="251" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1610053837652" />
+    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1610053571474">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="507" y="281" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1610052054482" />
+    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1610053571474" />
+    <state x="507" y="281" key="Github.CreateGistDialog" timestamp="1610053435233">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="507" y="281" key="Github.CreateGistDialog/0.0.1366.728@0.0.1366.728" timestamp="1610053435233" />
     <state x="561" y="259" key="Github.ShareDialog" timestamp="1610050945351">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -290,10 +318,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="513" y="85" key="NewPhpClassDialog/0.0.1366.728@0.0.1366.728" timestamp="1607889663258" />
-    <state x="184" y="0" key="SettingsEditor" timestamp="1610053415841">
+    <state x="184" y="0" key="SettingsEditor" timestamp="1610053427697">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1610053415841" />
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1610053427697" />
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1610061998490">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1610061998490" />
     <state x="263" y="17" key="com.intellij.database.dbimport.ImportDialog" timestamp="1607376913241">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -302,6 +334,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="167" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/0.0.1366.728@0.0.1366.728" timestamp="1607380341688" />
+    <state x="484" y="269" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1610054112531">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="484" y="269" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1366.728@0.0.1366.728" timestamp="1610054112531" />
     <state x="412" y="236" width="611" height="286" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1603839819246">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -328,7 +364,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php</url>
-          <line>38</line>
+          <line>39</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -338,7 +374,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php</url>
-          <line>68</line>
+          <line>73</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
