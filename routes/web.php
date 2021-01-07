@@ -48,9 +48,10 @@ Route::group(['middleware' => ['auth']], function () {
 
 
     ///priekš skata 'Jaunumi'
-    Route::get('/news', [NewsController::class, 'showNews']);
+    Route::get('/news', [NewsController::class, 'showNews'])->name('news');
     Route::post('/news', [NewsController::class, 'addNews'])->name('addNews');
     Route::post('/news/{id}', [NewsController::class, 'showNewsByTopic'])->name('showTopicById');
+    Route::post('/news/delete/{id}', [NewsController::class, 'deleteNews'])->name('news.delete');
 
 
 

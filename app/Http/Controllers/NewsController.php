@@ -41,4 +41,11 @@ class NewsController extends Controller
         return view('news')->with('news', $news)->with('allNewsTopic', $allNewsTopic);
     }
 
+    public function deleteNews($id)
+    {
+        $news = News::find($id);
+        $news->delete();
+        return redirect()->route('news');
+    }
+
 }

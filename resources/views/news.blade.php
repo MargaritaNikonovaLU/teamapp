@@ -116,6 +116,10 @@
                 <h6>Pievienots: {{$row['created_at']}}</h6>
                 <h5>Nosaukums: {{$row['news_title']}}</h5>
                 <p>{{$row['news_content']}}</p>
+                <form method="POST" action="{{ route('news.delete', $row['id'])}}">
+                    @csrf
+                    <button type ="submit"  class="btn btn-danger">Izdzēst</button>
+                </form>
             </div>
                 <?php $rowNumber++ ?>
             @endforeach
