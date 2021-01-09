@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="23a750bd-3f14-4ebf-a5e5-81047a558f6d" name="Default Changelist" comment="">
+    <list default="true" id="23a750bd-3f14-4ebf-a5e5-81047a558f6d" name="Default Changelist" comment="Pievienoju delete funkciju pie NewsController.php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_27_232558_create_files_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_27_232558_create_files_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/file-upload.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/file-upload.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -143,7 +144,7 @@
     <property name="DatabaseDriversLRU" value="mariadb&#10;mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../shopproject" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -197,7 +198,7 @@
       <workItem from="1609013538436" duration="64638000" />
       <workItem from="1609284978348" duration="33000" />
       <workItem from="1609285036855" duration="58000" />
-      <workItem from="1609285130787" duration="78929000" />
+      <workItem from="1609285130787" duration="109653000" />
     </task>
     <task id="LOCAL-00001" summary="Project">
       <created>1610053841501</created>
@@ -213,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610062243428</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Pievienoju delete funkciju pie NewsController.php">
+      <created>1610063193677</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1610063193677</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +232,8 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="Project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Project" />
+    <MESSAGE value="Pievienoju delete funkciju pie NewsController.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pievienoju delete funkciju pie NewsController.php" />
   </component>
   <component name="WindowStateProjectService">
     <state x="438" y="186" key="#Notifications" timestamp="1610049609054">
@@ -239,18 +248,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="773" y="164" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1607892961766" />
-    <state x="413" y="117" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610062472100">
+    <state x="413" y="117" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610201573816">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="117" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1610062472100" />
-    <state x="251" y="0" key="CommitChangelistDialog2" timestamp="1610062240247">
+    <state x="413" y="117" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1610201573816" />
+    <state x="251" y="0" key="CommitChangelistDialog2" timestamp="1610199860553">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="251" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1610062240247" />
-    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1610053571474">
+    <state x="251" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1610199860553" />
+    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1610119422955">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1610053571474" />
+    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1610119422955" />
     <state x="507" y="281" key="Github.CreateGistDialog" timestamp="1610053435233">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -323,10 +332,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1610053427697" />
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1610062243754">
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1610063195620">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1610062243754" />
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1610063195620" />
     <state x="263" y="17" key="com.intellij.database.dbimport.ImportDialog" timestamp="1607376913241">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -335,10 +344,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="167" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog/0.0.1366.728@0.0.1366.728" timestamp="1607380341688" />
-    <state x="500" y="276" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610062166082">
+    <state x="500" y="276" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610063156493">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="500" y="276" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1610062166082" />
+    <state x="500" y="276" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1610063156493" />
     <state x="484" y="269" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1610054112531">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -351,10 +360,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1609030400480" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1610047646830">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1610197577924">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1610047646830" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1610197577924" />
     <state x="146" y="110" key="vcs.ApplyPatchDifferentiatedDialog" timestamp="1605796121493">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -396,6 +405,11 @@
           <url>file://$PROJECT_DIR$/resources/views/chat.blade.php</url>
           <line>64</line>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/file-upload.blade.php</url>
+          <line>36</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

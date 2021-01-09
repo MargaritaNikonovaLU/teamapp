@@ -12,6 +12,19 @@
             list-style: none;
         }
 
+
+        .leftcolumn {
+            float: left;
+            width: 75%;
+        }
+
+        /* Right column */
+        .rightcolumn {
+            float: left;
+            width: 25%;
+            padding-left: 50px;
+        }
+
     </style>
 
 <!-- Modal -->
@@ -29,7 +42,13 @@
                 </div>
                 <div class="modal-body">
                     <input type="text" placeholder="Dokumenta nosaukums" name="name">
-                    <input type="text" placeholder="Tēma" name="subject">
+                            <select name="subject">
+                                <option value="Virtuve">Virtuve</option>
+                                <option value="Restorāns">Restorāns</option>
+                                <option value="Viesnīca">Viesnīca</option>
+                                <option value="Grāmatvedība">Grāmatvedība</option>
+                                <option value="Pārējais">Pārējais</option>
+                            </select>
                     <div class="custom-file">
                         <input type="file" name="file" class="custom-file-input" id="chooseFile">
                     </div>
@@ -78,11 +97,12 @@
 <h3 class="text-center mb-5" align="center">Dokumenti</h3>
 
 {{--        Poga "Pievienot dokumentu" ir pieejama tikai administratoram--}}
-@if(auth()->user()->is_admin == 0)
+@if((auth()->user()->is_admin == 0) or (auth()->user()->user_id == 2) or (auth()->user()->user_id == 3))
     <li class="hidden-xs"><a href="#" class="add-project" data-toggle="modal" data-target="#add_project">Pievienot dokumentus</a></li>
 @endif
         <br>
-
+        <div class="row">
+            <div class="leftcolumn">
 {{--      Tabula, kur no datu bāzes tiek ņemti ieraksti (faili)  --}}
                 <table class="table table-hover">
                     <tr>
@@ -99,26 +119,30 @@
                     @foreach($file as $row)
                         <tr>
                             <td>{{$rowNumber}}</td>
-                            @if( empty($row['name']))
-                            <td>{{$row['file_path']}}</td>
-                            @else
+
 {{--               Vēl tiks koriģēts, bet pašlaik ideja ir iekļaut funkciju, kas paredz: uzspiežot uz failu, tas tiks lejpielādēts      --}}
-                                <td><a href="/storage/uploads/{{$row['name']}}"  download>{{$row['name']}} </td>
-                            @endif
-                            <td> {{$row['created_at']}}</td>
+                            <td>
+                                @if($row['name']===empty($row['name']))
+                                    <a href="{{route('download', $row['file_path'])}}"><i class="fas fa-file-download"></i>{{$row['file_path']}}</a>
+                                @else
+                                    <a href="{{route('download', $row['file_path'])}}"><i class="fas fa-file-download"></i>{{$row['name']}}</a>
+                                @endif
+                            </td>
+                            <td>{{$row['created_at']}}</td>
                             <td>{{$row['user_id']}}</td>
                             <td>{{$row['description']}}</td>
                             <td>{{$row['subject']}}</td>
                             <th>
 {{--  Poga, lai varētu izdzēst kādu konkrētu failu --}}
+                                @if(auth()->user()->is_admin == 0)
                                 <form method="POST" class="delete_file" action="{{ route('file.delete', $row['id'])}}">
                                     @csrf
                                     <input type="hidden" name="delete" value="IZDZĒST" />
                                     <button type ="submit" class="btn btn-danger">
                                         Izdzēst
                                     </button>
-
                                 </form>
+                                    @endif
                             </th>
                         </tr>
                         <?php $rowNumber++ ?>
@@ -130,6 +154,23 @@
         @endif
 
 </div>
+
+        <div class="rightcolumn">
+
+                <h2>Dokumenti pēc tēmas</h2>
+                @foreach($fileByTopic as $row)
+                    <div class="row">
+                        <form method="POST" action="{{route('showFilesById', $row['id'])}}">
+                            @csrf
+                            <button type ="submit"  class="btn-link">{{$row['subject']}}</button>
+                        </form>
+                    </div>
+                @endforeach
+
+        </div>
+        </div>
+
+    </div>
     </div>
 
 @endsection

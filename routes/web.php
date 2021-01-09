@@ -59,6 +59,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/upload-file', [FileController::class, 'createForm'])->name('file-upload');
     Route::post('/upload-file', [FileController::class, 'fileUpload'])->name('fileUpload');
     Route::post('/upload-file/{id}', [FileController::class, 'deleteFile'])->name('file.delete');
+    Route::get('/storage/{file_path}', [FileController::class, 'download'])->name('download');
+    Route::post('/files/{id}', [FileController::class, 'showFilesByTopic'])->name('showFilesById');
+
 
 
 
