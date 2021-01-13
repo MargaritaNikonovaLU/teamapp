@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Role;
 use Illuminate\Database\Seeder;
 use Illuminate\Foundation\Auth\User;
 
@@ -17,16 +18,43 @@ class DatabaseSeeder extends Seeder
 
 
 
-//        $users = [
+//        $roles = [
 //            [
 //                'id' => 1,
-//                'name' => 'Admin',
-//                'email' => 'admin@admin.com',
-//                'password' => bcrypt('password'),
-//                'remember_token' => null,
+//                'name' => 'Darbinieks',
 //            ],
 //        ];
 //
-//        User::insert($users);
-    }
+//        Role::insert($roles);
+//
+//        $roles = [
+//            [
+//                'id' => 2,
+//                'name' => 'Zāles pārzinis',
+//            ],
+//        ];
+//
+//        Role::insert($roles);
+//
+//        $roles = [
+//            [
+//                'id' => 3,
+//                'name' => 'Šefpavārs',
+//                'created_at' =>
+//                'user_name' => '1',
+//            ],
+//        ];
+//
+//        Role::insert($roles);
+//
+//        $roles = [
+//            [
+//                'id' => 4,
+//                'name' => 'Direktors',
+//            ],
+//        ];
+//
+//        Role::insert($roles);
+//
+  }
 }

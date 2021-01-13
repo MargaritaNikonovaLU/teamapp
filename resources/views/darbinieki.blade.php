@@ -30,7 +30,7 @@
                 @foreach($user as $row)
                     <tr>
                        <td>{{$rowNumber}}</td>
-                        <td><a href="{{route('userProfileById', $row['id'])}}"> {{$row['name']}}</td>
+                        <td><a href="{{route('userProfileById', $row['id'])}}">{{$row['name']}}</td>
                         <td> {{$row['vcode']}}</td>
                         <td> {{$row['email']}}</td>
                         <td>
@@ -62,7 +62,7 @@
                         <td>
                                 <form method="POST" action="{{ route('add.staffname', $row['id'])}}" >
                                     @csrf
-                                    <select name="user_id">
+                                    <select name="user_id" value="{{$row['user_id']}}">
                                         @foreach($role as $roles)
                                             @if($row['user_id']===$roles['id'])
                                                 <option value="{{$roles['id']}}" selected disabled hidden>{{$roles['name']}}</option>

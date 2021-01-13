@@ -7,8 +7,6 @@
         }
     </style>
 
-
-
     <link rel="stylesheet" href="{{ asset('/css/userprofile.css') }}">
     @foreach($user as $row)
        @if(auth()->user()->id == $row['id'])
@@ -19,9 +17,7 @@
                    <div class="alert alert-success">{{ Session::get('message') }}</div>
                @endif
 
-
-               <br />
-
+               <br/>
 
     <div class="page-content page-container" id="page-content">
         <div class="padding">
@@ -36,7 +32,7 @@
                                     @foreach($role as $roles)
                                         @if($row['user_id']===$roles['id'])
                                     <p>Amats: {{$roles['name']}}</p> <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
-                                   @endif
+                                        @endif
                                     @endforeach
                                 </div>
                             </div>

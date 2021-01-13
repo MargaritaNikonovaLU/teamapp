@@ -1,6 +1,5 @@
 @extends('profile')
 @section('database')
-
     <style>
 
         /* Create two unequal columns that floats next to each other */
@@ -65,10 +64,8 @@
     <body>
     <form class="task_form" method="POST" action="{{route('addNews')}}" novalidate>
         @csrf
-
     <div id="add_project" class="modal fade" role="dialog">
         <div class="modal-dialog">
-
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header login-header">
@@ -80,16 +77,12 @@
                     <input type="text" placeholder="Ziņas nosaukums" name="news_title">
                     <textarea type ="text" name="news_content" placeholder="Ziņas saturs"></textarea>
                 </div>
-
-
                 <div class="modal-footer">
                     <button type="button" class="cancel" data-dismiss="modal">Aizvērt</button>
                     <button type="submit" class="add-project" >Saglabāt</button>
 
                 </div>
             </div>
-
-
         </div>
     </div>
     </form>
@@ -102,12 +95,11 @@
     @endif
 
     <h3 align="center">Jaunumi</h3>
+
     @if(auth()->user()->is_admin == 0)
         <li class="hidden-xs"><a href="#" class="add-project" data-toggle="modal" data-target="#add_project">Pievienot jauno ziņu</a></li>
     @endif
-
         <?php $rowNumber = 1 ?>
-
     <div class="row">
         <div class="leftcolumn">
             @foreach($news as $row)
@@ -116,10 +108,12 @@
                 <h6>Pievienots: {{$row['created_at']}}</h6>
                 <h5>Nosaukums: {{$row['news_title']}}</h5>
                 <p>{{$row['news_content']}}</p>
+                @if((auth()->user()->is_admin == 0) or (auth()->user()->user_id == 4))
                 <form method="POST" action="{{ route('news.delete', $row['id'])}}">
                     @csrf
-                    <button type ="submit"  class="btn btn-danger">Izdzēst</button>
+                    <button type ="submit"  class="btn btn-danger">Izdzēst ziņu</button>
                 </form>
+                @endif
             </div>
                 <?php $rowNumber++ ?>
             @endforeach
@@ -147,5 +141,4 @@
     </div>
 </div>
     </div>
-
 @endsection

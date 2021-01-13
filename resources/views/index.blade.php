@@ -18,9 +18,6 @@ overflow-y:auto;
     background: #eeeeee;
 }
 
-.active{
-    background: #8492af;
-}
 </style>
 
 <div class="message-wrapper">

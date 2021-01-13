@@ -5,30 +5,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>SignUp</title>
+    <title>Reģistrācija</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 
-<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper)
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
- -->
-
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 
-
-<!-- Custom styles for this template -->
-
+<!-- pievienotie style priekš skata -->
 <link rel="stylesheet" href="{{ asset('/css/signin.css') }}">
-
 
 <body class="text-center">
 
-<form class="form-signin" method="POST" action="{{route ('auth.signup')}}" novalidate>
+<form class="form-signin" method="POST" action="{{route ('send.auth.signup')}}" novalidate>
     @csrf
     <img class="mb-4" src="{{asset('images/logo-removebg-preview.png')}}" alt="logo" width="150" height="120">
     <h1 class="h3 mb-3 font-weight-normal">Reģistrēšana</h1>
@@ -42,7 +34,7 @@
     @endif
 
     <label for="inputEmail" class="sr-only">E-pasts</label>
-    <input type="email"  name="email" id="inputEmail" class="form-control {{$errors->has('email') ? 'is-invalid' : ''}}" placeholder="Email address" value="{{ old('email') ? : ''}}">
+    <input type="email"  name="email" id="inputEmail" class="form-control {{$errors->has('email') ? 'is-invalid' : ''}}" placeholder="Epasta adrese" value="{{ old('email') ? : ''}}">
 
     @if($errors->has('email'))
         <span class="help-block text-danger">
@@ -51,7 +43,7 @@
     @endif
 
     <label for="inputPassword" class="sr-only">Parole</label>
-    <input type="password" name="password" id="inputPassword" class="form-control {{$errors->has('password') ? 'is-invalid' : ''}}" placeholder="Password" value="{{ old('password') ? : ''}}" >
+    <input type="password" name="password" id="inputPassword" class="form-control {{$errors->has('password') ? 'is-invalid' : ''}}" placeholder="Parole" value="{{ old('password') ? : ''}}" >
 
     @if($errors->has('password'))
         <span class="help-block text-danger">
@@ -68,7 +60,7 @@
     @endif
     <br>
     <button type="submit" name="button" class="btn btn-lg btn-primary btn-block" >Izveidot lietotāju</button>
-    <p class="mt-5 mb-3 text-muted">&copy; 2020</p>
+    <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
 </form>
 </body>
 </html>

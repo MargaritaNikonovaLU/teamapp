@@ -97,7 +97,7 @@
 <h3 class="text-center mb-5" align="center">Dokumenti</h3>
 
 {{--        Poga "Pievienot dokumentu" ir pieejama tikai administratoram--}}
-@if((auth()->user()->is_admin == 0) or (auth()->user()->user_id == 2) or (auth()->user()->user_id == 3))
+@if((auth()->user()->is_admin == 0) OR (auth()->user()->user_id !== 1) )
     <li class="hidden-xs"><a href="#" class="add-project" data-toggle="modal" data-target="#add_project">Pievienot dokumentus</a></li>
 @endif
         <br>
@@ -109,7 +109,6 @@
                         <th>Nr. </th>
                         <th>Nosaukums</th>
                         <th>Pievienots</th>
-                        <th>Pievienotājs</th>
                         <th>Pamatojums</th>
                         <th>Tema</th>
                         <th></th>
@@ -122,14 +121,13 @@
 
 {{--               Vēl tiks koriģēts, bet pašlaik ideja ir iekļaut funkciju, kas paredz: uzspiežot uz failu, tas tiks lejpielādēts      --}}
                             <td>
-                                @if($row['name']===empty($row['name']))
+                                @if(empty($row['name']))
                                     <a href="{{route('download', $row['file_path'])}}"><i class="fas fa-file-download"></i>{{$row['file_path']}}</a>
                                 @else
                                     <a href="{{route('download', $row['file_path'])}}"><i class="fas fa-file-download"></i>{{$row['name']}}</a>
                                 @endif
                             </td>
                             <td>{{$row['created_at']}}</td>
-                            <td>{{$row['user_id']}}</td>
                             <td>{{$row['description']}}</td>
                             <td>{{$row['subject']}}</td>
                             <th>

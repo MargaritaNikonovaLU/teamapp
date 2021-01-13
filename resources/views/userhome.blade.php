@@ -28,15 +28,18 @@
 
 <body class="text-center">
 <div class="container">
-<form class="form-signin" method="POST" action="{{route('auth.signin')}}" novalidate>
-@csrf
+<form class="form-signin" method="POST" action="{{route('send.auth.signin')}}" novalidate>
     @if (Session::has('message'))
         <div class="alert alert-danger">{{ Session::get('message') }}</div>
     @endif
+        @if (Session::has('warning'))
+            <div class="alert alert-warning">{{ Session::get('warning') }}</div>
+        @endif
+@csrf
    <img class="mb-4" src="{{asset('images/logo-removebg-preview.png')}}" alt="logo" width="150" height="120">
     <h1 class="h3 mb-3 font-weight-normal">Ielogošana</h1>
     <label for="inputEmail" class="sr-only">E-pasts</label>
-    <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address">
+    <input type="email" name="email" id="inputEmail" class="form-control" placeholder="E-pasta adrese">
 
     @if($errors->has('email'))
         <span class="help-block text-danger">
@@ -44,7 +47,7 @@
     </span>
     @endif
     <label for="inputPassword" class="sr-only">Parole</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password">
+    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Parole">
     @if($errors->has('password'))
         <span class="help-block text-danger">
         {{$errors->first('password')}}

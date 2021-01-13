@@ -30,9 +30,8 @@ class DarbiniekiController extends Controller
     public function userStatus($id){
 
         $data = User::find($id);
-
         //ja administrators  cenšas aktivēt vai diaktivēt sevi, viņam padod ziņu, ka to darīt nedrīkst
-        if (Auth::user()->approvestatus == $id) {
+        if ($data->is_admin === 0) {
             return redirect()->back()->with('message', 'Nevar deaktivēt sevi.');
         }
 
@@ -56,10 +55,14 @@ class DarbiniekiController extends Controller
         $this->validate($request,[
             'user_id']);
         $user = User::find($id);
-        $user->user_id=$request->get('user_id');
+        $userRole=$user->user_id;
+        if ($userRole!==$request->user_id){    //ja izvēlās to pašu lomu lietotājam, ta īstenībā nekas nemainās.
+            $user->user_id=$request->get('user_id');
+        }
+        else $user->user_id = $userRole;
         $user->save();
         $user = User::all()->toArray();
-        //roles ir konkrēti 5 amata veidi
+        //roles ir konkrēti 4 amata veidi
         $role = Role::all()->toArray();
         return redirect()->back()->with('user', $user)->with('role', $role);
     }

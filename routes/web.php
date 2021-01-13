@@ -71,9 +71,9 @@ Route::group(['middleware' => ['auth']], function () {
         ///priekš skata 'Ielogošana un Registresana'
 
         Route::get('/registerlhj', [AuthController::class, 'getSignup'])->name('auth.signup');
-        Route::post('/registerlhj', [AuthController::class, 'postSignup']);
+        Route::post('/registerlhj', [AuthController::class, 'postSignup'])->name('send.auth.signup');
         Route::get('/signin', [AuthController::class, 'getSignin'])->name('auth.signin');
-        Route::post('/signin', [AuthController::class, 'postSignin']);
+        Route::post('/signin', [AuthController::class, 'postSignin'])->name('send.auth.signin');
         Route::get('/logout', [AuthController::class, 'getLogout'])->name('logout');
 
 

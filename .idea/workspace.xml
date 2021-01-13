@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="23a750bd-3f14-4ebf-a5e5-81047a558f6d" name="Default Changelist" comment="Pievienoju delete funkciju pie NewsController.php">
+    <list default="true" id="23a750bd-3f14-4ebf-a5e5-81047a558f6d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ChatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ChatController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DarbiniekiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DarbiniekiController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_27_232558_create_files_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_27_232558_create_files_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_29_213050_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_29_213050_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_07_201511_create_tasks_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_07_201511_create_tasks_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_13_195315_create_messages_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_13_195315_create_messages_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/chat.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/chat.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/darbinieki.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/darbinieki.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/file-upload.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/file-upload.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/news.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/news.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/registerlhj.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/registerlhj.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/useProfile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/useProfile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/userhome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/userhome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/uzdevumi.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/uzdevumi.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/uzdevumiPassed.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/uzdevumiPassed.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +216,9 @@
       <workItem from="1609013538436" duration="64638000" />
       <workItem from="1609284978348" duration="33000" />
       <workItem from="1609285036855" duration="58000" />
-      <workItem from="1609285130787" duration="109653000" />
+      <workItem from="1609285130787" duration="134226000" />
+      <workItem from="1610310025922" duration="7702000" />
+      <workItem from="1610404475217" duration="35556000" />
     </task>
     <task id="LOCAL-00001" summary="Project">
       <created>1610053841501</created>
@@ -221,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610063193677</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Pievienoju delete funkciju pie NewsController.php">
+      <created>1610209551492</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1610209551492</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,18 +275,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="773" y="164" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1607892961766" />
-    <state x="413" y="117" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610201573816">
+    <state x="413" y="117" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610495065470">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="117" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1610201573816" />
-    <state x="251" y="0" key="CommitChangelistDialog2" timestamp="1610199860553">
+    <state x="413" y="117" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1610495065470" />
+    <state x="251" y="0" key="CommitChangelistDialog2" timestamp="1610209548699">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="251" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1610199860553" />
-    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1610119422955">
+    <state x="251" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1610209548699" />
+    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1610211300834">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1610119422955" />
+    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1610211300834" />
     <state x="507" y="281" key="Github.CreateGistDialog" timestamp="1610053435233">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -332,10 +359,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1610053427697" />
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1610063195620">
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2" timestamp="1610209551824">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1610063195620" />
+    <state x="275" y="95" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1610209551824" />
     <state x="263" y="17" key="com.intellij.database.dbimport.ImportDialog" timestamp="1607376913241">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -377,18 +404,13 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php</url>
-          <line>39</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/uzdevumi.blade.php</url>
           <line>10</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/AuthController.php</url>
-          <line>73</line>
+          <line>75</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -402,14 +424,14 @@
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/resources/views/chat.blade.php</url>
-          <line>64</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/resources/views/file-upload.blade.php</url>
           <line>36</line>
           <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/uzdevumiPassed.blade.php</url>
+          <line>10</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

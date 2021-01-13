@@ -72,11 +72,7 @@ ievadītos datus un saglabā to datu bāzē, ja nav kļūdu*/
         $file = File::where('subject', $fileName)->get();
         $files = File::all();
         $fileByTopic = $files->unique('subject');
-        return redirect(route('file-upload'));
-
-
-
+        return view('file-upload')->with('file', $file)->with('fileByTopic', $fileByTopic);
     }
-
 
 }

@@ -7,12 +7,11 @@ use App\Http\Requests\UsersFormRequest;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
+//AuthController satur visas funkcijas, kas nepieciešamas reģistrācijai un autentificēšanai sistēmā
 
 class AuthController extends Controller
 {
-
-    //AuthController satur visas funkcijas, kas nepieciešamas reģistrācijai un autentificēšanai sistēmā
-
     public function getSignup()
     {
         return view('registerlhj'); //attēlo reģistrācijas skatu
@@ -24,13 +23,14 @@ class AuthController extends Controller
     {
         $user = new User([  //pārbauda visus laukus, lai tie būtu korekti ievadīti vai ievadīti vispār
             'email' => $request->input('email'),
-            'password' => bcrypt($request->input('password')),
+            'password' => bcrypt($request->input('password')),  //saglabā paroli šifrētā veidā
             'vcode' => $request->input('vcode'), //speciāls lauks, kas pēc tam dod iespēju uzņēmuma direktoram atpazīt 'savējos' darbiniekus. Šo kodu direktors iedot pats.
             'name' => $request->input ('name'),
         ]);
         //lietotājs tiek saglabāts datu bāzē tabulā 'users' un tiek atgriezts uz ielogošanas skatu ar paziņojumu
         $user->save();
-        return view('userhome')->with( 'msg','Reģistrācijas dati nosūtīti. Jums jāpagaidā apstiprinājums.'); //paziņojums
+        Session::flash('warning', 'Reģistrācijas dati nosūtīti. Jums jāpagaidā apstiprinājums.');
+        return view('userhome'); //paziņojums
     //lietotājam tiek paziņots, ka viņam ir jāpagaida, kamēr direktors aktivēs lietotāju savā profilā.
     }
 
@@ -46,15 +46,17 @@ class AuthController extends Controller
     {
         //ja nav tāda lietotāja (ar ievadīto e-pastu un paroli), tad tā ir kļūda, un par to lietotājs tiek informēts
         if (!Auth::attempt($request->only(['email', 'password']))) {
-            return redirect()->back()->with('message', 'Lietotājs ar tādu epastu vai paroli nav reģistrēts.'); //paziņojums par kļūdu
+            Session::flash('message', 'Lietotājs ar tādu epastu vai paroli nav reģistrēts.');
+            return view('userhome'); //paziņojums par kļūdu
         }
 
         //ja tāds lietotājs eksistē, tad tālāk pārbauda, vai viņš ir aktivēts (ar direktora palīdzību)
-        if (Auth::attempt($request->only(['email', 'password']))) {
+        else if (Auth::attempt($request->only(['email', 'password']))) {
             $userStatus = Auth::User()->approvestatus;
             if ($userStatus == '0') {
                 //ja lietotājs nav aktivēts, tad viņs tiek paziņots, ka ir jāpagaidā apstiprinājums
-                return redirect()->back()->with('message', 'JĀGAIDA REĢISTRĀCIJAS APSTIPRINĀJUMU');
+                Session::flash('warning', 'JĀGAIDA REĢISTRĀCIJAS APSTIPRINĀJUMU');
+                return view('userhome');
                 //ja ir aktīvs, tad lietotāju pārvieto uz viņa 'profila' skatu
             } else return redirect()->route('userprofile');
         }

@@ -20,6 +20,8 @@ class CreateMessagesTable extends Migration
             $table->text('message');
             $table->tinyInteger('is_read')->default(1);
             $table->timestamps();
+            $table->integer('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

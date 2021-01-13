@@ -17,7 +17,7 @@
                     <form>
                         <label>Atbildīgais:</label>
                         <select name="user_id">
-                            <option value="1">Visi darbinieki</option>
+                            <option value="1">Darbinieks</option>
                             <option value="2">Zāles pārzinis</option>
                             <option value="3">Šefpavārs</option>
                             <option value="4">Direktors</option>
@@ -83,7 +83,9 @@
                     <th >Uzdevuma formulējums</th>
                     <th>Izpildes termiņš</th>
                     <th>Atbildīgais</th>
+                    @if(auth()->user()->is_admin == 0)
                     <th>Statuss</th>
+                    @endif
                     <th>Komentārs direktoram</th>
                     @if(auth()->user()->is_admin == 0)
                         <th></th>
@@ -92,8 +94,8 @@
                 </tr>
                 <?php $rowNumber = 1 ?>
                 @foreach($task as $row)
+{{--                    lietotājam ir attēloti tikai viņam uzdotie uzdevumi--}}
                     @if( ($row['status'] === 0) AND ((auth()->user()->user_id == $row['user_id']) OR (auth()->user()->is_admin == 0)))
-
                         <tr>
                         <td>{{$rowNumber}}</td>
                         <td>{{$row['title']}}</td>
@@ -106,7 +108,7 @@
                             @endif
                         @endforeach
                         </td>
-                        @if(auth()->user()->is_admin == 0)
+                        @if((auth()->user()->is_admin == 0) OR ($row['user_id'] !== 1) )
                         <td>
                             <form method="POST" class="activate_form" action="{{ route('task.approve', $row['id'])}}">
                                 @csrf
@@ -130,6 +132,7 @@
                             </form>
                            @endif
                         </td>
+                            @if(auth()->user()->is_admin == 0)
                         <td>
                                 <form method="POST" action="{{ route('editTask', $row['id'])}}">
                                     @csrf
@@ -142,6 +145,7 @@
                                 <button type ="submit"  class="btn btn-danger">Izdzēst</button>
                             </form>
                         </td>
+                            @endif
 
                     </tr>
                     <?php $rowNumber++ ?>
